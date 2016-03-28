@@ -14,7 +14,7 @@
 
 6) SQL> exit
 
-7) C:\Users\hkedu>impdp bms/bms directory=save file=emt.dmp
+7) C:\Users\hkedu>impdp emt/emt directory=save file=emt.dmp
 
 
 ★오류가 생길 경우
@@ -35,4 +35,4 @@
 
 8) SQL> exit
 
-9) C:\Users\hkedu>impdp bms/bms directory=save file=emt.dmp
+9) C:\Users\hkedu>impdp emt/emt directory=save file=emt.dmp

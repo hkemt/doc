@@ -227,4 +227,4 @@ ALTER TABLE BOARD
 
 2.emt.dmp익스포트방법
 
-exp userid=emt/emt file='C:\dev\EMT.DMP'
+expdp emt/emt directory=save dumpfile=emt.dmp
