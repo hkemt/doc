@@ -25,7 +25,7 @@ MM_reloadPage(true);
       <tr>
         <td width="766" align="center"><h1> English Mock Test</h1></td>
         <td width="234" height="82" align="center" valign="bottom">         <h4>관리자 로그인 </h4>
-              <input name="button" type="button" onClick-"location.href='index.html'" value="로그아웃">          
+              <input name="button" type="button" value="로그아웃">          
           </td>
       </tr>
     </table></td>
@@ -34,9 +34,9 @@ MM_reloadPage(true);
     <td height="59" align="left" valign="middle" bgcolor="#FFFFFF"><table width="704" height="57" border="0">
       <tr align="center" valign="middle">
         <td width="169"><a href="#">EMT 소개 </a></td>
-        <td width="169"><a href="#">회원관리</a></td>
-        <td width="169"><a href="#">문제관리</a></td>
-        <td width="169"><a href="#">게시판관리</a> </td>
+        <td width="169"><a href="../회원관리/회원목록.html">회원관리</a></td>
+        <td width="169"><a href="../문제관리/문제목록.html">문제관리</a></td>
+        <td width="169"><a href="게시판목록.html">게시판관리</a> </td>
       </tr>
     </table></td>
   </tr>
@@ -46,12 +46,13 @@ MM_reloadPage(true);
 	<div id="Layer1" style="left:321px; top:216px; width:636px; height:404px; z-index:1; border: 1px solid black; ">
 	  <p>게시판 목록 </p>
 	  <p>공지여부, 제목, 날짜, 조회수</p>
+	  <a href="관리자게시판상세보기.html">상세보기</a>
 	</div>
 	<div align="right"><br>
 	  </div>
 	<div id="Layer2" style="left:893px; top:638px; width:636px;  height:26px; z-index:2; border: 1px solid black;">
   	  <div align="right">
-  	    <input type="button" name="Submit" value="글쓰기">
+  	    <input type="button" name="Submit" onclick="location.href='관리자게시판글등록.html'" value="글쓰기">
 	    </div>
 	</div>
 	</td>
