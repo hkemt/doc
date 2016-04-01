@@ -1,4 +1,4 @@
-/* body еб╠в */
+/* body О©╫б╠О©╫ */
 body {
 	background-color: #FFFFCC;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -7,7 +7,7 @@ body {
 	color: #336699;
 }
 
-/* td, th еб╠в */
+/* td, th О©╫б╠О©╫ */
 td, th {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 12px;
@@ -15,25 +15,25 @@ td, th {
 	color: #333333;
 }
 
-/* a еб╠в */
+/* a О©╫б╠О©╫ */
 a {
 	font-size: 12px;
 	color: #336600;
 }
 
-/* form еб╠в */
+/* form О©╫б╠О©╫ */
 form {
 	background-color: #CCCC99;
 }
 
-/* title еб╠в */
+/* title О©╫б╠О©╫ */
 .title {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	line-height: 20px;
  background-color: #99CC00; color: #003333;}
 
-/* header еб╠в */
+/* header О©╫б╠О©╫ */
 .header {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 20px;
@@ -41,7 +41,7 @@ form {
  color: #FFFF33;
 }
 
-/* nav еб╠в */
+/* nav О©╫б╠О©╫ */
 .nav {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -49,7 +49,7 @@ form {
 	background-color: #CCFF99;
 }
 
-/* navLink еб╠в */
+/* navLink О©╫б╠О©╫ */
 .navLink {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
@@ -57,7 +57,7 @@ form {
 	background-color: #DEDECA;
 }
 
-/* footer еб╠в */
+/* footer О©╫б╠О©╫ */
 .footer {
   font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
