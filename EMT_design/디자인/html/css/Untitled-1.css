@@ -1,0 +1,29 @@
+/* CSS Document */
+.bold   {font-size: 10pt; font-weight: bold; color: #564BB1}
+.txt     {font-size: 9pt; text-align=center; color: #564BB1}
+.txt2    {font-size: 9pt; text-align=center; color: black;line-height: 150%;}
+.txt3    {color:white; font-weight: bold;}
+.txt4    {font-size: 9pt; text-align=left; color: #564BB1}
+.white  {font-size: 9pt; text-align=center; color: white}
+.black  {font-size: 12pt; text-align=center; font-weight: bold}
+.subt    {font-size: 10pt; font-weight: bold; text-align: center; text-valign: middle; color: white; background-color:#84c1f1; border:1 solid black}
+.tdc     {font-size: 9pt; text-align: center; text-valign: middle; background-color:#84c1f1}
+input    {font-size: 9pt;}
+select   {font-size: 9pt;}
+td   {font-size: 9pt;}
+tr   {font-size: 9pt;}
+textarea {font-size: 9pt;line-height: 150%;}
+body {font-size: 9pt;}
+A:link   {color: black;text-decoration: none;}
+A:active {color: blue;text-decoration: none;}
+A:visited{color: black;text-decoration: none;}
+A:hover  {color: blue;text-decoration: none;}
+BODY, TD { 
+scrollbar-face-color: #C0C0C0; 
+scrollbar-shadow-color: #4671EA; 
+scrollbar-highlight-color: #AFC1F3; 
+scrollbar-3dlight-color: #333333; 
+scrollbar-darkshadow-color: #000000; 
+scrollbar-track-color: #DFE7FF; 
+scrollbar-arrow-color: #C0C0C0; 
+}
