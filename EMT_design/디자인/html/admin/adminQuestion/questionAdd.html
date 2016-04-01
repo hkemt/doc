@@ -25,10 +25,8 @@ MM_reloadPage(true);
       <tr>
         <td width="766" align="center"><h1> English Mock Test</h1></td>
         <td width="234" height="82" align="center" valign="bottom">         <h4>관리자 로그인 </h4>
-              <input type="button" name="button" value="본인정보 관리">
               
-              <input type="button" name="button" value="복습">
-              <input name="button" type="button" value="로그아웃">          
+              <input name="button" type="button" onclick="location.href='../../index.html'" value="로그아웃">          
           </td>
       </tr>
     </table></td>
@@ -37,9 +35,9 @@ MM_reloadPage(true);
     <td height="59" align="left" valign="middle" bgcolor="#FFFFFF"><table width="704" height="57" border="0">
       <tr align="center" valign="middle">
         <td width="169"><a href="#">EMT 소개 </a></td>
-        <td width="169"><a href="../회원관리/회원목록.html">회원관리</a></td>
-        <td width="169"><a href="문제목록.html">문제관리</a></td>
-        <td width="169"><a href="../게시판관리/게시판목록.html">게시판관리</a> </td>
+        <td width="169"><a href="../adminUser/userList.html">회원관리</a></td>
+        <td width="169"><a href="questionList.html">문제관리</a></td>
+        <td width="169"><a href="../adminBoard/adminBoard.html">게시판관리</a> </td>
       </tr>
     </table></td>
   </tr>
@@ -47,7 +45,7 @@ MM_reloadPage(true);
     <td height="591" align="center" valign="middle" bgcolor="#FFFFFF">
 	
 	<div id="Layer1" style="left:321px; top:216px; width:636px; height:404px; z-index:1; ">
-	<form enctype="multipart/form-data">
+	<form action="questionList.html" method="post" enctype="multipart/form-data">
 	  <p>
 	    유형번호 
 	      <label>
@@ -90,7 +88,7 @@ MM_reloadPage(true);
 	      <input type="file" name="img">
       </p>
 	  <div align="right">
-  	    <input type="button" name="Submit" onclick="loactin.href='문제목록.html'" value="글등록">
+  	    <input type="submit" name="Submit" value="등록">
 	    </div>
 	</form>
 	</div>
