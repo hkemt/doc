@@ -1,0 +1,442 @@
+-- 1) BOARD
+
+
+BOARD_NO	NUMBER
+BOARD_TITLE	VARCHAR2(100 BYTE)
+BOARD_CONTENT	VARCHAR2(4000 BYTE)
+USER_ID		VARCHAR2(20 BYTE)
+BOARD_DATE	DATE
+BOARD_COUNT	NUMBER
+
+
+
+-- 2) NOTICE
+
+NOTICE_NO	NUMBER
+BOARD_NO	NUMBER
+
+
+-- 3) QUESTION
+
+QUESTION_NO	NUMBER
+QUESTION_TYPE	NUMBER
+QUESTION_VIDEO	VARCHAR2(100 BYTE)
+
+
+
+-- 4) REPLY
+
+REPLY_NO	NUMBER
+REPLY_CONTENT	VARCHAR2(4000 BYTE)
+USER_ID		VARCHAR2(20 BYTE)
+REPLY_DATE	DATE
+BOARD_NO	NUMBER
+
+
+
+
+-- 5) REVIEW
+
+REVIEW_NO	NUMBER
+USER_ID		VARCHAR2(20 BYTE)
+QUESTION_NO	NUMBER
+
+
+-- 6) USERS
+
+USER_ID		VARCHAR2(20 BYTE)
+USER_PW		VARCHAR2(20 BYTE)
+EMAIL		VARCHAR2(50 BYTE)
+USER_DATE	DATE
+
+
+
+
+
+
+
+-- 순서상 첫번째
+INSERT INTO users values ( 'admin','admin','admin@emt.org', sysdate );
+INSERT INTO users values ( 'user1','user1','user1@emt.org', sysdate );
+INSERT INTO users values ( 'user2','user2','user2@emt.org', sysdate );
+INSERT INTO users values ( 'user3','user3','user3@emt.org', sysdate );
+INSERT INTO users values ( 'user4','user4','user4@emt.org', sysdate );
+INSERT INTO users values ( 'user5','user5','user5@emt.org', sysdate );
+INSERT INTO users values ( 'user6','user6','user6@emt.org', sysdate );
+INSERT INTO users values ( 'user7','user7','user7@emt.org', sysdate );
+INSERT INTO users values ( 'user8','user8','user8@emt.org', sysdate );
+INSERT INTO users values ( 'user9','user9','user9@emt.org', sysdate );
+INSERT INTO users values ( 'user10','user10','user10@emt.org', sysdate );
+INSERT INTO users values ( 'user11','user11','user11@emt.org', sysdate );
+INSERT INTO users values ( 'user12','user12','user12@emt.org', sysdate );
+INSERT INTO users values ( 'user13','user13','user13@emt.org', sysdate );
+INSERT INTO users values ( 'user14','user14','user14@emt.org', sysdate );
+INSERT INTO users values ( 'user15','user15','user15@emt.org', sysdate );
+INSERT INTO users values ( 'user16','user16','user16@emt.org', sysdate );
+INSERT INTO users values ( 'user17','user17','user17@emt.org', sysdate );
+INSERT INTO users values ( 'user18','user18','user18@emt.org', sysdate );
+INSERT INTO users values ( 'user19','user19','user19@emt.org', sysdate );
+INSERT INTO users values ( 'user20','user20','user20@emt.org', sysdate );
+
+--순서 상 두번째
+INSERT INTO board values (seq_board_no.nextval, '만나서 반갑습니다.', '만나서 반갑습니다. 제이름은 박민수입니다.', 'admin', '16/03/01',  3);
+
+INSERT INTO board values (seq_board_no.nextval, '제목', '내용', 'user1', '16/03/01',  2);
+INSERT INTO board values (seq_board_no.nextval, '토익스피킹 연습을 할 수 있군요.','이런 곳이 생기다니 정말 꿈만 같습니다.', 'user2', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '내가 3번 째로 가입하는군요','정말 도움이 많이 될 듯 하네요. 반가워요.', 'user3', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '다들 처음 뵙겠습니다.','이런 곳이 생길 줄이야 꿈만 같습니다.', 'user4', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '삼행시를 지어보죠','감사합니다. 자주뵈요.', 'user5', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '여긴 뭡니까?','여기 별로 인거 같은데 다른데 가는거 어때요?', 'user6', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '이곳은 곧 성지가 된다.','성지가 될거에요.', 'user7', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '흥하라 흥해~','잘 됐으면 좋겠다.', 'user8', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '시그널 토스','신호가 왔다.... 누구냐 넌?', 'user9', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '어머나~','이런 사이트가 생길 줄이야.', 'user10', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '정말 정말 반가워요','저도 반가워요.', 'user11', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '내가 드뎌 가입하는 군요.','이번 토익스피킹은 꼭 성공한다.', 'user12', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '토스 정복하러 왔습니다.','토스 정복하자', 'user13', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '같이 열공합시다.','열공', 'user14', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '지금 왔지 말입니다.','ㅋㅋㅋ', 'user15', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '응답하라 토익스피킹','1988', 'user16', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '오오오오오','오오오오오오오오오오오오오오오오오오오오오', 'user17', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '냉무','냉무랬죠', 'user18', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '제가 왔지요','ㅋㅋㅋㅋㅋㅋㅋ', 'user19', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '이런 곳에는 글을 남겨야 매너죠','근데 무슨 글을 남기죠?', 'user20', '16/03/01',  3);
+
+INSERT INTO board values (seq_board_no.nextval, '제목', '내용', 'user1', '16/03/01',  2);
+INSERT INTO board values (seq_board_no.nextval, '토익스피킹 연습을 할 수 있군요.','이런 곳이 생기다니 정말 꿈만 같습니다.', 'user2', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '내가 3번 째로 가입하는군요','정말 도움이 많이 될 듯 하네요. 반가워요.', 'user3', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '다들 처음 뵙겠습니다.','이런 곳이 생길 줄이야 꿈만 같습니다.', 'user4', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '삼행시를 지어보죠','감사합니다. 자주뵈요.', 'user5', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '여긴 뭡니까?','여기 별로 인거 같은데 다른데 가는거 어때요?', 'user6', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '이곳은 곧 성지가 된다.','성지가 될거에요.', 'user7', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '흥하라 흥해~','잘 됐으면 좋겠다.', 'user8', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '시그널 토스','신호가 왔다.... 누구냐 넌?', 'user9', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '어머나~','이런 사이트가 생길 줄이야.', 'user10', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '정말 정말 반가워요','저도 반가워요.', 'user11', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '내가 드뎌 가입하는 군요.','이번 토익스피킹은 꼭 성공한다.', 'user12', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '토스 정복하러 왔습니다.','토스 정복하자', 'user13', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '같이 열공합시다.','열공', 'user14', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '지금 왔지 말입니다.','ㅋㅋㅋ', 'user15', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '응답하라 토익스피킹','1988', 'user16', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '오오오오오','오오오오오오오오오오오오오오오오오오오오오', 'user17', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '냉무','냉무랬죠', 'user18', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '제가 왔지요','ㅋㅋㅋㅋㅋㅋㅋ', 'user19', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '이런 곳에는 글을 남겨야 매너죠','근데 무슨 글을 남기죠?', 'user20', '16/03/01',  3);
+
+INSERT INTO board values (seq_board_no.nextval, '제목', '내용', 'user1', '16/03/01',  2);
+INSERT INTO board values (seq_board_no.nextval, '토익스피킹 연습을 할 수 있군요.','이런 곳이 생기다니 정말 꿈만 같습니다.', 'user2', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '내가 3번 째로 가입하는군요','정말 도움이 많이 될 듯 하네요. 반가워요.', 'user3', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '다들 처음 뵙겠습니다.','이런 곳이 생길 줄이야 꿈만 같습니다.', 'user4', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '삼행시를 지어보죠','감사합니다. 자주뵈요.', 'user5', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '여긴 뭡니까?','여기 별로 인거 같은데 다른데 가는거 어때요?', 'user6', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '이곳은 곧 성지가 된다.','성지가 될거에요.', 'user7', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '흥하라 흥해~','잘 됐으면 좋겠다.', 'user8', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '시그널 토스','신호가 왔다.... 누구냐 넌?', 'user9', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '어머나~','이런 사이트가 생길 줄이야.', 'user10', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '정말 정말 반가워요','저도 반가워요.', 'user11', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '내가 드뎌 가입하는 군요.','이번 토익스피킹은 꼭 성공한다.', 'user12', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '토스 정복하러 왔습니다.','토스 정복하자', 'user13', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '같이 열공합시다.','열공', 'user14', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '지금 왔지 말입니다.','ㅋㅋㅋ', 'user15', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '응답하라 토익스피킹','1988', 'user16', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '오오오오오','오오오오오오오오오오오오오오오오오오오오오', 'user17', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '냉무','냉무랬죠', 'user18', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '제가 왔지요','ㅋㅋㅋㅋㅋㅋㅋ', 'user19', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '이런 곳에는 글을 남겨야 매너죠','근데 무슨 글을 남기죠?', 'user20', '16/03/01',  3);
+
+INSERT INTO board values (seq_board_no.nextval, '제목', '내용', 'user1', '16/03/01',  2);
+INSERT INTO board values (seq_board_no.nextval, '토익스피킹 연습을 할 수 있군요.','이런 곳이 생기다니 정말 꿈만 같습니다.', 'user2', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '내가 3번 째로 가입하는군요','정말 도움이 많이 될 듯 하네요. 반가워요.', 'user3', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '다들 처음 뵙겠습니다.','이런 곳이 생길 줄이야 꿈만 같습니다.', 'user4', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '삼행시를 지어보죠','감사합니다. 자주뵈요.', 'user5', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '여긴 뭡니까?','여기 별로 인거 같은데 다른데 가는거 어때요?', 'user6', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '이곳은 곧 성지가 된다.','성지가 될거에요.', 'user7', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '흥하라 흥해~','잘 됐으면 좋겠다.', 'user8', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '시그널 토스','신호가 왔다.... 누구냐 넌?', 'user9', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '어머나~','이런 사이트가 생길 줄이야.', 'user10', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '정말 정말 반가워요','저도 반가워요.', 'user11', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '내가 드뎌 가입하는 군요.','이번 토익스피킹은 꼭 성공한다.', 'user12', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '토스 정복하러 왔습니다.','토스 정복하자', 'user13', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '같이 열공합시다.','열공', 'user14', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '지금 왔지 말입니다.','ㅋㅋㅋ', 'user15', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '응답하라 토익스피킹','1988', 'user16', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '오오오오오','오오오오오오오오오오오오오오오오오오오오오', 'user17', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '냉무','냉무랬죠', 'user18', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '제가 왔지요','ㅋㅋㅋㅋㅋㅋㅋ', 'user19', '16/03/01',  3);
+INSERT INTO board values (seq_board_no.nextval, '이런 곳에는 글을 남겨야 매너죠','근데 무슨 글을 남기죠?', 'user20', '16/03/01',  3);
+
+
+--순서 상 세번째
+INSERT INTO notice values (seq_notice_no.nextval, 1);
+INSERT INTO notice values (seq_notice_no.nextval, 2);
+INSERT INTO notice values (seq_notice_no.nextval, 3);
+INSERT INTO notice values (seq_notice_no.nextval, 4);
+INSERT INTO notice values (seq_notice_no.nextval, 5);
+INSERT INTO notice values (seq_notice_no.nextval, 6);
+INSERT INTO notice values (seq_notice_no.nextval, 7);
+INSERT INTO notice values (seq_notice_no.nextval, 8);
+INSERT INTO notice values (seq_notice_no.nextval, 9);
+INSERT INTO notice values (seq_notice_no.nextval, 10);
+
+
+--순서 상 네번째
+INSERT INTO reply values ( seq_reply_no.nextval, '안녕하세요.', 'admin', '16/04/01', 1);
+INSERT INTO reply values ( seq_reply_no.nextval, '좋네요.', 'user1', '16/04/01', 1);
+INSERT INTO reply values ( seq_reply_no.nextval, '정말 반가워요.', 'user2', '16/04/01', 1);
+INSERT INTO reply values ( seq_reply_no.nextval, '친하게 지내죠', 'user3', '16/04/01', 1);
+INSERT INTO reply values ( seq_reply_no.nextval, '저 기억나시죠?', 'user4', '16/04/01', 1);
+INSERT INTO reply values ( seq_reply_no.nextval, 'ㅋㅋㅋㅋㅋㅋ', 'user5', '16/04/01', 1);
+INSERT INTO reply values ( seq_reply_no.nextval, '도를 믿습니까?', 'user6', '16/04/01', 1);
+INSERT INTO reply values ( seq_reply_no.nextval, '토스토스토스', 'user7', '16/04/01', 1);
+INSERT INTO reply values ( seq_reply_no.nextval, '이건 모냐ㅋㅋㅋ', 'user8', '16/04/01', 1);
+INSERT INTO reply values ( seq_reply_no.nextval, 'ㅋㅋㅋㅋㅋㅋㅋ', 'user9', '16/04/01', 1);
+INSERT INTO reply values ( seq_reply_no.nextval, '흐흐흐흐', 'user10', '16/04/01', 1);
+
+INSERT INTO reply values ( seq_reply_no.nextval, '안녕하세요.', 'admin', '16/04/01', 2);
+INSERT INTO reply values ( seq_reply_no.nextval, '좋네요.', 'user1', '16/04/01', 2);
+INSERT INTO reply values ( seq_reply_no.nextval, '정말 반가워요.', 'user2', '16/04/01', 2);
+INSERT INTO reply values ( seq_reply_no.nextval, '친하게 지내죠', 'user3', '16/04/01', 2);
+INSERT INTO reply values ( seq_reply_no.nextval, '저 기억나시죠?', 'user4', '16/04/01', 2);
+INSERT INTO reply values ( seq_reply_no.nextval, 'ㅋㅋㅋㅋㅋㅋ', 'user5', '16/04/01', 2);
+INSERT INTO reply values ( seq_reply_no.nextval, '도를 믿습니까?', 'user6', '16/04/01', 2);
+INSERT INTO reply values ( seq_reply_no.nextval, '토스토스토스', 'user7', '16/04/01', 2);
+INSERT INTO reply values ( seq_reply_no.nextval, '이건 모냐ㅋㅋㅋ', 'user8', '16/04/01', 2);
+INSERT INTO reply values ( seq_reply_no.nextval, 'ㅋㅋㅋㅋㅋㅋㅋ', 'user9', '16/04/01', 2);
+INSERT INTO reply values ( seq_reply_no.nextval, '흐흐흐흐', 'user10', '16/04/01', 2);
+
+INSERT INTO reply values ( seq_reply_no.nextval, '안녕하세요.', 'admin', '16/04/01', 3);
+INSERT INTO reply values ( seq_reply_no.nextval, '좋네요.', 'user1', '16/04/01', 3);
+INSERT INTO reply values ( seq_reply_no.nextval, '정말 반가워요.', 'user2', '16/04/01', 3);
+INSERT INTO reply values ( seq_reply_no.nextval, '친하게 지내죠', 'user3', '16/04/01', 3);
+INSERT INTO reply values ( seq_reply_no.nextval, '저 기억나시죠?', 'user4', '16/04/01', 3);
+INSERT INTO reply values ( seq_reply_no.nextval, 'ㅋㅋㅋㅋㅋㅋ', 'user5', '16/04/01', 3);
+INSERT INTO reply values ( seq_reply_no.nextval, '도를 믿습니까?', 'user6', '16/04/01', 3);
+INSERT INTO reply values ( seq_reply_no.nextval, '토스토스토스', 'user7', '16/04/01', 3);
+INSERT INTO reply values ( seq_reply_no.nextval, '이건 모냐ㅋㅋㅋ', 'user8', '16/04/01', 3);
+INSERT INTO reply values ( seq_reply_no.nextval, 'ㅋㅋㅋㅋㅋㅋㅋ', 'user9', '16/04/01', 3);
+INSERT INTO reply values ( seq_reply_no.nextval, '흐흐흐흐', 'user10', '16/04/01', 3);
+
+INSERT INTO reply values ( seq_reply_no.nextval, '안녕하세요.', 'admin', '16/04/01', 4);
+INSERT INTO reply values ( seq_reply_no.nextval, '좋네요.', 'user1', '16/04/01', 4);
+INSERT INTO reply values ( seq_reply_no.nextval, '정말 반가워요.', 'user2', '16/04/01', 4);
+INSERT INTO reply values ( seq_reply_no.nextval, '친하게 지내죠', 'user3', '16/04/01', 4);
+INSERT INTO reply values ( seq_reply_no.nextval, '저 기억나시죠?', 'user4', '16/04/01', 4);
+INSERT INTO reply values ( seq_reply_no.nextval, 'ㅋㅋㅋㅋㅋㅋ', 'user5', '16/04/01', 4);
+INSERT INTO reply values ( seq_reply_no.nextval, '도를 믿습니까?', 'user6', '16/04/01', 4);
+INSERT INTO reply values ( seq_reply_no.nextval, '토스토스토스', 'user7', '16/04/01', 4);
+INSERT INTO reply values ( seq_reply_no.nextval, '이건 모냐ㅋㅋㅋ', 'user8', '16/04/01', 4);
+INSERT INTO reply values ( seq_reply_no.nextval, 'ㅋㅋㅋㅋㅋㅋㅋ', 'user9', '16/04/01', 4);
+INSERT INTO reply values ( seq_reply_no.nextval, '흐흐흐흐', 'user10', '16/04/01', 4);
+
+INSERT INTO reply values ( seq_reply_no.nextval, '안녕하세요.', 'admin', '16/04/01', 5);
+INSERT INTO reply values ( seq_reply_no.nextval, '좋네요.', 'user1', '16/04/01', 5);
+INSERT INTO reply values ( seq_reply_no.nextval, '정말 반가워요.', 'user2', '16/04/01', 5);
+INSERT INTO reply values ( seq_reply_no.nextval, '친하게 지내죠', 'user3', '16/04/01', 5);
+INSERT INTO reply values ( seq_reply_no.nextval, '저 기억나시죠?', 'user4', '16/04/01', 5);
+INSERT INTO reply values ( seq_reply_no.nextval, 'ㅋㅋㅋㅋㅋㅋ', 'user5', '16/04/01', 5);
+INSERT INTO reply values ( seq_reply_no.nextval, '도를 믿습니까?', 'user6', '16/04/01', 5);
+INSERT INTO reply values ( seq_reply_no.nextval, '토스토스토스', 'user7', '16/04/01', 5);
+INSERT INTO reply values ( seq_reply_no.nextval, '이건 모냐ㅋㅋㅋ', 'user8', '16/04/01', 5);
+INSERT INTO reply values ( seq_reply_no.nextval, 'ㅋㅋㅋㅋㅋㅋㅋ', 'user9', '16/04/01', 5);
+INSERT INTO reply values ( seq_reply_no.nextval, '흐흐흐흐', 'user10', '16/04/01', 5);
+
+
+--순서 상 다섯번째
+--토스1
+INSERT INTO question values(seq_question_no.nextval, 1, '1-1');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-2');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-3');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-4');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-5');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-6');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-7');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-8');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-9');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-10');
+
+INSERT INTO question values(seq_question_no.nextval, 1, '1-11');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-12');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-13');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-14');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-15');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-16');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-17');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-18');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-19');
+INSERT INTO question values(seq_question_no.nextval, 1, '1-20');
+
+--토스2
+INSERT INTO question values(seq_question_no.nextval, 2, '2-1');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-2');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-3');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-4');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-5');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-6');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-7');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-8');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-9');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-10');
+
+INSERT INTO question values(seq_question_no.nextval, 2, '2-11');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-12');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-13');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-14');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-15');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-16');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-17');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-18');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-19');
+INSERT INTO question values(seq_question_no.nextval, 2, '2-20');
+
+
+--토스3
+INSERT INTO question values(seq_question_no.nextval, 3, '3-1');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-2');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-3');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-4');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-5');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-6');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-7');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-8');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-9');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-10');
+
+INSERT INTO question values(seq_question_no.nextval, 3, '3-11');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-12');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-13');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-14');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-15');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-16');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-17');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-18');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-19');
+INSERT INTO question values(seq_question_no.nextval, 3, '3-20');
+
+
+--토스4
+INSERT INTO question values(seq_question_no.nextval, 4, '4-1');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-2');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-3');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-4');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-5');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-6');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-7');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-8');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-9');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-10');
+
+INSERT INTO question values(seq_question_no.nextval, 4, '4-11');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-12');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-13');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-14');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-15');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-16');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-17');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-18');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-19');
+INSERT INTO question values(seq_question_no.nextval, 4, '4-20');
+
+--토스5
+INSERT INTO question values(seq_question_no.nextval, 5, '5-1');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-2');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-3');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-4');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-5');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-6');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-7');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-8');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-9');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-10');
+
+INSERT INTO question values(seq_question_no.nextval, 5, '5-11');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-12');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-13');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-14');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-15');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-16');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-17');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-18');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-19');
+INSERT INTO question values(seq_question_no.nextval, 5, '5-20');
+
+
+--토스6
+INSERT INTO question values(seq_question_no.nextval, 6, '6-1');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-2');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-3');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-4');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-5');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-6');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-7');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-8');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-9');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-10');
+
+INSERT INTO question values(seq_question_no.nextval, 6, '6-11');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-12');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-13');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-14');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-15');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-16');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-17');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-18');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-19');
+INSERT INTO question values(seq_question_no.nextval, 6, '6-20');
+
+
+
+--순서상 여섯번째
+INSERT INTO review values ( seq_review_no.nextval,'user1', 1 );
+INSERT INTO review values ( seq_review_no.nextval,'user1', 2 );
+INSERT INTO review values ( seq_review_no.nextval,'user1', 3 );
+INSERT INTO review values ( seq_review_no.nextval,'user1', 4 );
+INSERT INTO review values ( seq_review_no.nextval,'user1', 5 );
+INSERT INTO review values ( seq_review_no.nextval,'user1', 6 );
+INSERT INTO review values ( seq_review_no.nextval,'user1', 7 );
+INSERT INTO review values ( seq_review_no.nextval,'user1', 8 );
+INSERT INTO review values ( seq_review_no.nextval,'user1', 9 );
+INSERT INTO review values ( seq_review_no.nextval,'user1', 10 );
+
+INSERT INTO review values ( seq_review_no.nextval,'user2', 11 );
+INSERT INTO review values ( seq_review_no.nextval,'user2', 12 );
+INSERT INTO review values ( seq_review_no.nextval,'user2', 13 );
+INSERT INTO review values ( seq_review_no.nextval,'user2', 14 );
+INSERT INTO review values ( seq_review_no.nextval,'user2', 15 );
+INSERT INTO review values ( seq_review_no.nextval,'user2', 16 );
+INSERT INTO review values ( seq_review_no.nextval,'user2', 17 );
+INSERT INTO review values ( seq_review_no.nextval,'user2', 18 );
+INSERT INTO review values ( seq_review_no.nextval,'user2', 19 );
+INSERT INTO review values ( seq_review_no.nextval,'user2', 20 );
+
+INSERT INTO review values ( seq_review_no.nextval,'user3', 21 );
+INSERT INTO review values ( seq_review_no.nextval,'user3', 22 );
+INSERT INTO review values ( seq_review_no.nextval,'user3', 23 );
+INSERT INTO review values ( seq_review_no.nextval,'user3', 24 );
+INSERT INTO review values ( seq_review_no.nextval,'user3', 25 );
+INSERT INTO review values ( seq_review_no.nextval,'user3', 26 );
+INSERT INTO review values ( seq_review_no.nextval,'user3', 27 );
+INSERT INTO review values ( seq_review_no.nextval,'user3', 28 );
+INSERT INTO review values ( seq_review_no.nextval,'user3', 29 );
+INSERT INTO review values ( seq_review_no.nextval,'user3', 30 );
+
+INSERT INTO review values ( seq_review_no.nextval,'user4', 31 );
+INSERT INTO review values ( seq_review_no.nextval,'user4', 32 );
+INSERT INTO review values ( seq_review_no.nextval,'user4', 33 );
+INSERT INTO review values ( seq_review_no.nextval,'user4', 34 );
+INSERT INTO review values ( seq_review_no.nextval,'user4', 35 );
+INSERT INTO review values ( seq_review_no.nextval,'user4', 36 );
+INSERT INTO review values ( seq_review_no.nextval,'user4', 37 );
+INSERT INTO review values ( seq_review_no.nextval,'user4', 38 );
+INSERT INTO review values ( seq_review_no.nextval,'user4', 39 );
+INSERT INTO review values ( seq_review_no.nextval,'user4', 40 );
+
+INSERT INTO review values ( seq_review_no.nextval,'user5', 41 );
+INSERT INTO review values ( seq_review_no.nextval,'user5', 42 );
+INSERT INTO review values ( seq_review_no.nextval,'user5', 43 );
+INSERT INTO review values ( seq_review_no.nextval,'user5', 44 );
+INSERT INTO review values ( seq_review_no.nextval,'user5', 45 );
+INSERT INTO review values ( seq_review_no.nextval,'user5', 46 );
+INSERT INTO review values ( seq_review_no.nextval,'user5', 47 );
+INSERT INTO review values ( seq_review_no.nextval,'user5', 48 );
+INSERT INTO review values ( seq_review_no.nextval,'user5', 49 );
+INSERT INTO review values ( seq_review_no.nextval,'user5', 50 );
