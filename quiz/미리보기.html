@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<style>
+	a { text-decoration: none;}
+</style>
+</head>
+<body>
+
+	<a href="http://javaking75.blog.me/140194047076" >원본 소스 출처입니다. 참고</a>
+	<br><br>
+	
+	<form>
+		<input type="file" id="aas">
+		<div id="dda"></div>
+	</form>
+
+	<script>
+		$(document).ready(
+			function() {
+				function readURL(input) {
+					if (input.files && input.files[0]) {
+						var reader = new FileReader(); //파일을 읽기 위한 FileReader객체 생성
+
+						//파일 읽어들이기를 성공했을때 호출되는 이벤트 핸들러
+						reader.onload = function(e) {
+
+						//DIV에 비디오태그 추가
+						$('#dda').html(
+								"<video width='800px' height='500px' controls='controls' autoplay='autoplay'>"
+								+ "<source src='"+e.target.result+"' type='video/mp4'/>"
+								+ "</video>");
+						}
+						//File내용을 읽어 dataURL형식의 문자열로 저장
+						reader.readAsDataURL(input.files[0]);
+						
+					}
+				}//readURL()--
+
+				//file 양식으로 이미지를 선택(값이 변경) 되었을때 처리하는 코드
+				$("#aas").change(function() {
+					alert(this.value); //선택한 이미지 경로 표시
+					
+					
+					// 위에 만든 함수를 실행함
+					readURL(this);
+				});
+						});
+	</script>
+</body>
+</html>
