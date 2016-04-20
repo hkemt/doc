@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>부트스트랩 모달</title>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<style>
+body {
+    padding-top: 80px;
+    padding-left: 50px;
+}
+</style>
+</head>
+<body>
+	
+	<!-- 버튼 이벤트 modalClick() -->
+    <button class="btn  btn-default" data-toggle="modal" onclick="modalClick()" data-target="#intro">팝업 창으로 보기</button>
+    
+    <!-- 모달(처음에는 보이지 않는다 show를 해야함?? -->
+    <!-- 강사님 예제에 있던 맨위 div의 클래스 modal fade를 modal로 바꿈 -->
+    <div class="modal" id="mymodal">
+        <div class="modal-dialog" id="sss">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">새로운 소식</h4>
+                </div>
+                <div class="modal-body">
+                    <h3>Do it! 안드로이드 - 개정 2판(롤리팝, 안드로이드 스튜디오) PDF 받아가세요</h3>
+                    <p>Do it! 안드로이드 앱 프로그래밍 – 개정 2판이 출시되었습니다.</p>
+                    <br>
+                    <p>
+                        개정 2판 책 pdf 중 주요 부분(2,3장)을 공개해 드립니다. <br> 2015년 1월 이전의 구판을
+                        가지고 계시는 독자분들은 이 pdf를 참고해 주십시오.
+                    </p>
+                    <br>
+                    <p>
+                        다른 부분도 공개해 드리고 싶지만 그러면 저희 출판사가 존립할 수가 없으니 이해해 주셨으면 합니다.<br>
+                        대신 동영상 강좌가 올라오고 있으니 달라진 내용은 저자 직강 동영상을 참조해 주십시오.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <input type="text" id="mmodal" onchange="modalChange()">
+    <script>
+
+		// 버튼을 누르면 모달뜨는 함수
+		function modalClick(){
+			$("#mymodal").modal({show:true});
+		};
+		
+		// 체인지 이벤트 모달 띄우기
+		function modalChange(){
+			$("#mymodal").modal({show:true});
+		}
+		
+    </script>
+</body>
+</html>
