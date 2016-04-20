@@ -53,10 +53,43 @@ body {
             </div>
         </div>
     </div>
-    
+    <div id="timer"></div>
     <input type="text" id="mmodal" onchange="modalChange()">
     <script>
 
+    var bEnd = new Date();
+	bEnd.setMilliseconds(1000*60*10+1000);
+	var t = document.getElementById("timer");
+	function timer() {
+		var now = new Date();
+		var diff = bEnd - now;
+
+		if (diff > 1) {
+			var ms = Math.floor(diff % 1000);
+			diff = diff / 1000;
+			var sec = Math.floor(diff % 60);
+			diff = diff / 60;
+			var min = Math.floor(diff % 60);
+			diff = diff / 60;
+			var hour = Math.floor(diff % 24);
+			diff = diff / 24;
+			var days = Math.floor(diff);
+
+			if (sec < 10) {
+				sec = "0" + sec;
+			}
+			if (min < 10) {
+				min = "0" + min;
+			}
+
+			t.innerHTML = hour + ":" + min + ":" + sec;
+			setTimeout('timer()', 1000);
+		}
+		
+		else if (diff<1){
+			t.innerHTML = "휴식끝";
+		}
+	}
 		// 버튼을 누르면 모달뜨는 함수
 		function modalClick(){
 			$("#mymodal").modal({show:true});
@@ -67,6 +100,11 @@ body {
 			$("#mymodal").modal({show:true});
 		}
 		
+		
+			$("#sss").css("width", "10%");
+		
+			
+			timer();
     </script>
 </body>
 </html>
